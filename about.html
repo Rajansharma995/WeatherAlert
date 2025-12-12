@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherAlert | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Noto+Serif:wght@400;600&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar" role="banner">
+    <div class="container nav-inner">
+        <div class="logo_div" aria-label="WeatherAlert logo">
+            <div class="logo-icon" aria-hidden="true">⛅</div>
+            <h1>WeatherAlert</h1>
+        </div>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="alerts.html">Alerts &amp; Services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="section about-hero">
+        <div class="container">
+            <h2>About WeatherAlert</h2>
+            <p class="section-subtitle">
+                WeatherAlert is a prototype web application created for the ICT726 Web Development assignment.
+                It focuses on clean design, accessibility and simple, live weather data.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container card-grid">
+            <article class="feature-card">
+                <h3>Our Purpose</h3>
+                <p>
+                    The goal of WeatherAlert is to present complex weather information in a clear and friendly layout.
+                    The home page highlights key features, live city search and popular locations so users can quickly
+                    scan current conditions.
+                </p>
+            </article>
+            <article class="feature-card">
+                <h3>Technologies Used</h3>
+                <p>
+                    The site is built using semantic HTML5, CSS3 and vanilla JavaScript. Live weather data is retrieved
+                    from the OpenWeatherMap API using the Fetch API. Responsive design is implemented using flexbox,
+                    CSS grid and media queries.
+                </p>
+            </article>
+            <article class="feature-card">
+                <h3>Users</h3>
+                <p>
+                    WeatherAlert is designed for commuters, travellers and anyone who needs a quick snapshot of the
+                    weather before making decisions about their day. The interface is intentionally simple and
+                    accessible.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p class="footer-email">
+            <a href="mailto:20035211@testudents.koi.edu.au">
+                20035211@students.koi.edu.au
+            </a>
+        </p>
+        <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

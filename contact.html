@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherAlert | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Noto+Serif:wght@400;600&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar" role="banner">
+    <div class="container nav-inner">
+        <div class="logo_div" aria-label="WeatherAlert logo">
+            <div class="logo-icon" aria-hidden="true">⛅</div>
+            <h1>WeatherAlert</h1>
+        </div>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="alerts.html">Alerts &amp; Services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- top band -->
+    <section class="section contact-hero">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">
+                Have feedback about WeatherAlert? Send a message using the form below.
+                This form is part of a student project and does not send real emails.
+            </p>
+        </div>
+    </section>
+
+    <!-- two-column layout: left info, right form -->
+    <section class="section">
+        <div class="container contact-layout">
+            <!-- left card -->
+            <article class="contact-info-card">
+                <h3>Project Details</h3>
+                <p>
+                    WeatherAlert is a prototype website developed for the ICT726 Web Development unit.
+                    It demonstrates HTML, CSS, JavaScript, responsive design and the use of a public API.
+                </p>
+                <p>
+                    <strong>Student email:</strong><br>
+                    20035211@testudents.koi.edu.au
+                </p>
+                <p>
+                    <strong>Use of this form:</strong><br>
+                    You can type any example message to test validation. No real data is stored.
+                </p>
+            </article>
+
+            <!-- right card: the form -->
+            <article class="contact-form-card">
+                <h3>Send a Message</h3>
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required>
+                        <p id="name-error" class="form-error"></p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+                        <p id="email-error" class="form-error"></p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <p id="message-error" class="form-error"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="contact-status" class="form-status" aria-live="polite"></p>
+                </form>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p class="footer-email">
+            <a href="mailto:20035211@testudents.koi.edu.au">
+                20035211@students.koi.edu.au
+            </a>
+        </p>
+        <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

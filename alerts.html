@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherAlert | Alerts &amp; Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Noto+Serif:wght@400;600&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar" role="banner">
+    <div class="container nav-inner">
+        <div class="logo_div" aria-label="WeatherAlert logo">
+            <div class="logo-icon" aria-hidden="true">⛅</div>
+            <h1>WeatherAlert</h1>
+        </div>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="alerts.html" class="active">Alerts &amp; Services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="section alerts-hero">
+        <div class="container">
+            <h2>Alerts &amp; Services</h2>
+            <p class="section-subtitle">
+                WeatherAlert uses a simple alert model based on temperature, rain, storms and wind. This page explains how alerts are represented.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container card-grid">
+            <article class="feature-card">
+                <img src="image/clear.png" alt="Sunny alert icon" style="width:48px;height:48px;margin-bottom:8px;">
+                <h3>Sunny / Heat Alerts</h3>
+                <p>
+                    When the temperature is very high, WeatherAlert can show a heat warning. This reminds users
+                    to stay hydrated, avoid long periods in direct sunlight and check on vulnerable people.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <img src="image/rain.png" alt="Rain alert icon" style="width:48px;height:48px;margin-bottom:8px;">
+                <h3>Rain &amp; Storm Alerts</h3>
+                <p>
+                    For rainy or stormy conditions, WeatherAlert highlights that roads and footpaths may be slippery
+                    and that users should carry umbrellas or delay travel when possible.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <img src="image/snoe.png" alt="Snow alert icon" style="width:48px;height:48px;margin-bottom:8px;">
+                <h3>Cold &amp; Snow Alerts</h3>
+                <p>
+                    In regions that experience very cold or snowy weather, alerts remind users to dress warmly, consider
+                    ice on roads and plan extra travel time.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container card-grid">
+            <article class="feature-card">
+                <h3>How Live Alerts Work</h3>
+                <p>
+                    On the home page, when a user searches for a city, WeatherAlert checks the live API response for
+                    thunderstorm codes, heavy rain, strong winds and high temperatures. If any rules are met, a dynamic
+                    alert card is shown below the weather result.
+                </p>
+            </article>
+            <article class="feature-card">
+                <h3>Prototype Only</h3>
+                <p>
+                    This website is a prototype for learning purposes only. For real severe weather emergencies, users
+                    should always follow information from official government and emergency services websites.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p class="footer-email">
+            <a href="mailto:20035211@testudents.koi.edu.au">
+                20035211@students.koi.edu.au
+            </a>
+        </p>
+        <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

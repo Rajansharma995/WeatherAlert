@@ -1,0 +1,566 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Include padding and border in element's total width and height */
+}
+
+html { height: 100%; }
+
+body {
+    font-family: 'Noto Serif', serif; /* Elegant serif font for body text */
+    background-color: #ffffff;                  
+    min-height: 100vh;                       /* It Ensure body takes full viewport height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Averia Serif Libre', cursive;     /* Decorative font for headings like typography */
+    color: #111827;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    padding: 40px 0 50px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* CONTAINER */
+.container {
+    width: 80%;
+    margin: auto; /* Center the container */
+}
+
+/* NAVBAR*/
+.navbar { 
+    background-color: #ffffff;                      /* White background for navbar */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);         /* Subtle shadow for depth */
+    padding: 12px 0;                                /* Vertical padding */
+} 
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    color: #2563eb;
+    font-size: 1.4rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.navbar ul li a {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #2563eb;
+}
+
+.navbar ul li a.active::after,
+.navbar ul li a:hover::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #2563eb;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+/****************
+*** HERO SECTION
+*****************/
+.hero {
+    min-height: 320px;
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.5);
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero-kicker {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    color: #f3f4f6;
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/****************
+*** BUTTONS
+*****************/
+.btn {
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Noto Serif', serif;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+}
+.btn-primary:hover {
+    background-color: #1e40af;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #2563eb;
+    border: 1px solid #d1d5db;
+}
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-location {
+    width: 100%;
+    margin-top: 12px;
+    background-color: #eef2ff;
+    border: 1px solid #dbeafe;
+    color: #2563eb;
+}
+.btn-location:hover {
+    background-color: #dbeafe;
+}
+
+/****************
+*** CARD GRID
+*****************/
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    padding: 20px;
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    background: #eef2ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+/****************
+*** WEATHER SEARCH BOX
+*****************/
+.section-weather {
+    background-color: #f3f4f6;
+}
+
+.weather-search {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+#weather-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#city-input {
+    flex: 1 1 220px;
+    padding: 10px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+}
+#city-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
+}
+
+/****************
+*** WEATHER RESULT CARD
+*****************/
+.weather-result-card {
+    background-color: #f3f6fb;
+    border-radius: 14px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.weather-result-card.loading {
+    background-color: #e5e7eb;
+}
+
+.weather-result-card.error {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+}
+
+/****************
+*** WEATHER ALERTS
+*****************/
+.weather-alert {
+    margin-top: 10px;
+}
+
+.weather-alert-card {
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+.weather-alert-card.severe {
+    background: #fee2e2;
+    border-left: 4px solid #b91c1c;
+    color: #7f1d1d;
+}
+
+.weather-alert-card.warning {
+    background: #fff7cc;
+    border-left: 4px solid #d97706;
+    color: #92400e;
+}
+
+.weather-alert-card.info {
+    background: #e0f2fe;
+    border-left: 4px solid #2563eb;
+    color: #1e3a8a;
+}
+
+.weather-alert-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.weather-alert-details {
+    margin-left: 18px;
+    padding-left: 8px;
+}
+
+/****************
+*** POPULAR LOCATIONS
+*****************/
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.location-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-temp {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/****************
+*** ABOUT / ALERTS / CONTACT / MEDIA EXTRA STYLES
+*****************/
+.about-hero,
+.alerts-hero,
+.contact-hero {
+    background: #f3f4f6;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+/****************
+*** CONTACT PAGE (BEAUTIFUL & RESPONSIVE)
+*****************/
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* left card */
+.contact-info-card,
+.contact-form-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.contact-info-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+/* form styling */
+.contact-form-card h3 {
+    margin-bottom: 8px;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    color: #374151;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 0.9rem;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+
+.form-error {
+    font-size: 0.78rem;
+    color: #b91c1c;
+    min-height: 14px;
+    margin-top: 2px;
+}
+
+.form-status {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #047857;
+}
+
+/****************
+*** MEDIA GALLERY
+*****************/
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.media-item {
+    background: white;
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.media-item img {
+    max-width: 100%;
+}
+
+.media-item figcaption {
+    font-size: 0.85rem;
+    margin-top: 6px;
+    color: #4b5563;
+}
+
+/****************
+*** FOOTER
+*****************/
+.footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-email a {
+    color: #f3f4f6;
+}
+
+.footer-social {
+    margin-top: 8px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+/* ALERT CARD WITH IMAGE */
+.weather-alert-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+.weather-alert-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.weather-alert-content {
+    flex: 1 1 auto;
+}
+
+.weather-alert-title {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.weather-alert-meta {
+    font-size: 0.78rem;
+    opacity: 0.85;
+    margin-bottom: 6px;
+}
+
+/* severity colors */
+.weather-alert-card.severe {
+    background: #fee2e2;
+    border-left: 4px solid #b91c1c;
+    color: #7f1d1d;
+}
+.weather-alert-card.warning {
+    background: #fff7cc;
+    border-left: 4px solid #d97706;
+    color: #92400e;
+}
+.weather-alert-card.info {
+    background: #e0f2fe;
+    border-left: 4px solid #2563eb;
+    color: #1e3a8a;
+}
+
+.weather-alert-details {
+    margin-left: 18px;
+    padding-left: 8px;
+}
+
+/* responsive: keep it readable on phones */
+@media (max-width: 720px) {
+    .weather-alert-card {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    .weather-alert-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/****************
+*** RESPONSIVE BREAKPOINTS
+*****************/
+@media (max-width: 960px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    #weather-form {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        padding: 40px 0;
+    }
+}

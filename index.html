@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherAlert | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts from your default CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Noto+Serif:wght@400;600&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<header class="navbar" role="banner">
+    <div class="container nav-inner">
+        <div class="logo_div" aria-label="WeatherAlert logo">
+            <div class="logo-icon" aria-hidden="true">⛅</div>
+            <h1>WeatherAlert</h1>
+        </div>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="alerts.html">Alerts &amp; Services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO / BANNER -->
+    <!-- Set background image in CSS: .hero { background-image: url("images/hero.jpg"); } -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <p class="hero-kicker" id="hero-title">Stay Ahead of the Storm</p>
+                <p class="hero-text">
+                    Get real-time weather alerts and accurate forecasts to help you plan ahead.
+                    WeatherAlert is a prototype built for an ICT726 assignment and may not be
+                    always perfectly accurate.
+                </p>
+                <div class="hero-buttons">
+                    <a href="alerts.html" class="btn btn-primary">Explore Alerts</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY FEATURES -->
+    <section class="section section-features" aria-labelledby="features-title">
+        <div class="container">
+            <h2 id="features-title">Key Features</h2>
+            <p class="section-subtitle">
+                Designed to give you clear and simple weather information.
+            </p>
+
+            <div class="card-grid">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">⬆</div>
+                    <h3>Real-Time Data</h3>
+                    <p>Get current weather information for cities around the world using live API data.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">⚠</div>
+                    <h3>Severe Weather Focus</h3>
+                    <p>Highlight significant weather changes so users can prepare for storms or heatwaves.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">✨</div>
+                    <h3>Clean Interface</h3>
+                    <p>A simple card-based layout inspired by the assignment wireframes.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH CITY (WORKS WITH main.js) -->
+    <section class="section section-weather" aria-labelledby="weather-title">
+        <div class="container">
+            <h2 id="weather-title">Search Weather by City</h2>
+            <p class="section-subtitle">
+                Type the name of any city and tap <strong>Search City</strong> to view current conditions.
+            </p>
+    <div class="weather-search">
+        <form id="weather-form" aria-label="Search weather by city">
+            <label for="city-input" class="sr-only">City name</label>
+            <input
+                type="text"
+                id="city-input"
+                name="city"
+                placeholder="Enter city name e.g. Sydney"
+                required
+        />
+        <button type="submit" class="btn btn-primary">
+            Search City
+        </button>
+    </form>
+
+    <!-- Weather result card -->
+    <div id="weather-result" class="weather-result" aria-live="polite"></div>
+
+    <!-- Dynamic alerts will be shown here -->
+    <div id="weather-alert" class="weather-alert" aria-live="polite"></div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- POPULAR LOCATIONS -->
+    <section class="section section-locations" aria-labelledby="locations-title">
+        <div class="container">
+            <h2 id="locations-title">Popular Locations</h2>
+            <p class="section-subtitle">
+                Quick shortcuts to view the weather for major Australian cities. Click
+                <strong>View Details</strong> to auto-fill and search that city.
+            </p>
+
+            <div class="card-grid locations-grid">
+                <!-- Sydney -->
+                <article class="location-card" data-city="Sydney">
+                    <div class="location-header">
+                        <span class="location-icon" aria-hidden="true">📍</span>
+                        <div>
+                            <h3>Sydney</h3>
+                            <p class="location-condition">Partly Cloudy</p>
+                        </div>
+                        <span class="location-temp">24°C</span>
+                    </div>
+                    <button class="btn btn-location location-details-btn">View Details</button>
+                </article>
+
+                <!-- Melbourne -->
+                <article class="location-card" data-city="Melbourne">
+                    <div class="location-header">
+                        <span class="location-icon" aria-hidden="true">📍</span>
+                        <div>
+                            <h3>Melbourne</h3>
+                            <p class="location-condition">Rainy</p>
+                        </div>
+                        <span class="location-temp">18°C</span>
+                    </div>
+                    <button class="btn btn-location location-details-btn">View Details</button>
+                </article>
+
+                <!-- Brisbane -->
+                <article class="location-card" data-city="Brisbane">
+                    <div class="location-header">
+                        <span class="location-icon" aria-hidden="true">📍</span>
+                        <div>
+                            <h3>Brisbane</h3>
+                            <p class="location-condition">Sunny</p>
+                        </div>
+                        <span class="location-temp">28°C</span>
+                    </div>
+                    <button class="btn btn-location location-details-btn">View Details</button>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+        <p class="footer-email">
+            <a href="mailto:20035211@testudents.koi.edu.au">
+                20035211@students.koi.edu.au
+            </a>
+        </p>
+        <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript (weather + buttons) -->
+<script src="main.js"></script>
+</body>
+</html>

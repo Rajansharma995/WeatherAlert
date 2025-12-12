@@ -97,9 +97,7 @@ a {
     left: 0;
 }
 
-/****************
-*** HERO SECTION
-*****************/
+/* HERO SECTION */
 .hero {
     min-height: 320px;
     background-image: url("images/hero.jpg");
@@ -140,9 +138,7 @@ a {
     justify-content: center;
 }
 
-/****************
-*** BUTTONS
-*****************/
+/* BUTTON STYLES */
 .btn {
     padding: 10px 20px;
     border-radius: 999px;
@@ -183,9 +179,7 @@ a {
     background-color: #dbeafe;
 }
 
-/****************
-*** CARD GRID
-*****************/
+/* FEATURES GRID */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -211,9 +205,7 @@ a {
     font-size: 1.2rem;
 }
 
-/****************
-*** WEATHER SEARCH BOX
-*****************/
+/* WEATHER SECTION */
 .section-weather {
     background-color: #f3f4f6;
 }
@@ -245,9 +237,7 @@ a {
     box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
 }
 
-/****************
-*** WEATHER RESULT CARD
-*****************/
+/* WEATHER RESULT CARD */
 .weather-result-card {
     background-color: #f3f6fb;
     border-radius: 14px;
@@ -264,9 +254,7 @@ a {
     color: #7f1d1d;
 }
 
-/****************
-*** WEATHER ALERTS
-*****************/
+/* WEATHER ALERTS */
 .weather-alert {
     margin-top: 10px;
 }
@@ -306,9 +294,7 @@ a {
     padding-left: 8px;
 }
 
-/****************
-*** POPULAR LOCATIONS
-*****************/
+/*Popular Locations GRID*/
 .locations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -333,9 +319,7 @@ a {
     color: #2563eb;
 }
 
-/****************
-*** ABOUT / ALERTS / CONTACT / MEDIA EXTRA STYLES
-*****************/
+/* HERO VARIANTS */
 .about-hero,
 .alerts-hero,
 .contact-hero {
@@ -344,9 +328,7 @@ a {
     padding-bottom: 16px;
 }
 
-/****************
-*** CONTACT PAGE (BEAUTIFUL & RESPONSIVE)
-*****************/
+/* CONTACT FORM LAYOUT */
 .contact-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
@@ -414,9 +396,7 @@ a {
     color: #047857;
 }
 
-/****************
-*** MEDIA GALLERY
-*****************/
+/*MEDIA GALLERY*/
 .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -441,9 +421,7 @@ a {
     color: #4b5563;
 }
 
-/****************
-*** FOOTER
-*****************/
+/*FOOTER STYLES*/
 .footer {
     background: #111827;
     color: white;
@@ -529,9 +507,7 @@ a {
     }
 }
 
-/****************
-*** RESPONSIVE BREAKPOINTS
-*****************/
+/* RESPONSIVE STYLES */
 @media (max-width: 960px) {
     .container {
         width: 90%;
